@@ -107,7 +107,6 @@ export default function ReportClient({ reportId }: { reportId: string }) {
   const modules = data?.modules ?? [];
   const modulesToRender = modules.length > 0 ? modules : SKELETON_MODULES;
 
-
   return (
     <main className="max-w-3xl mx-auto p-6 space-y-6">
       
