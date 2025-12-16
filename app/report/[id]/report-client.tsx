@@ -104,7 +104,9 @@ export default function ReportClient({ reportId }: { reportId: string }) {
   }
 
   // 🚀 核心逻辑：始终使用 keyConfig 渲染 ReportShell
-  const modulesToRender = data?.modules?.length > 0 ? data.modules : SKELETON_MODULES;
+  const modules = data?.modules ?? [];
+  const modulesToRender = modules.length > 0 ? modules : SKELETON_MODULES;
+
 
   return (
     <main className="max-w-3xl mx-auto p-6 space-y-6">
